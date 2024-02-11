@@ -1,0 +1,40 @@
+Arguments:
+  /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/yarn add express dotenv
+
+PATH:
+  /opt/homebrew/bin:/opt/homebrew/sbin:/Users/pad/Desktop/platform-tools:/Users/pad/anaconda3/bin:/Applications/miniconda3/bin:/Users/pad/Downloads/flutter/bin:/Applications/MySQLWorkbench.app/Contents/MacOS:/opt/homebrew/bin:/opt/homebrew/opt/fzf/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/go/bin
+
+Yarn version:
+  1.22.19
+
+Node version:
+  21.6.1
+
+Platform:
+  darwin arm64
+
+Trace:
+  SyntaxError: /Users/pad/delivery/AuthApp/api/package.json: Expected double-quoted property name in JSON at position 168 (line 9 column 3)
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /opt/homebrew/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest:
+  {
+    "name": "api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.ts",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    ...
+  }
+
+yarn manifest:
+  No manifest
+
+Lockfile:
+  No lockfile
