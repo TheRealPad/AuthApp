@@ -1,5 +1,4 @@
-import { Props } from "./types.ts";
-import styles from "./styles.module.scss";
+import React from "react";
 import {
   AppBar,
   IconButton,
@@ -7,9 +6,11 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+
 import { SideBar } from "../sideBar";
+import { Props } from "./types.ts";
+import styles from "./styles.module.scss";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 function TopBar({ title, user, setUser }: Props) {
