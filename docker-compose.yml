@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  client:
+    build:
+      context: client/
+      dockerfile: ./Dockerfile
+    container_name: auth-client
+    ports:
+      - "${CLIENT_PORT}:${CLIENT_PORT}"
+    environment:
+      - VITE_PORT=${CLIENT_PORT}
+      - VITE_GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+    networks:
+        - back-net
+  api:
+    build:
+      context: api/
+      dockerfile: ./Dockerfile
+    container_name: auth-api
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    environment:
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+    networks:
+      - back-net
+
+networks:
+  back-net:
+    driver: bridge
